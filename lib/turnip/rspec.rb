@@ -65,7 +65,7 @@ module Turnip
             end
             feature.scenarios.each do |scenario|
               describe scenario.name, scenario.metadata_hash do
-                it scenario.steps.map(&:description).join(' -> ') do
+                it '' do
                   scenario.steps.each do |step|
                     run_step(feature_file, step)
                   end
